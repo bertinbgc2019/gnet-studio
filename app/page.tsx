@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [activeGallery, setActiveGallery] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
 const [showPrivacy, setShowPrivacy] = useState(false);
 
@@ -24,22 +25,63 @@ const galleryTitles: Record<string, string> = {
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
-      <nav className="bg-white shadow-md sticky top-0 z-40 border-b border-gnet-light">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <img src="/logo.png" alt="G-Net Studio Logo" className="h-16 w-auto object-contain" />
-            <span className="text-xl font-bold text-gnet-dark hidden sm:block"></span>
-          </div>
-          <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-            <li><a href="#inicio" className="hover:text-gnet-primary transition">Inicio</a></li>
-            <li><a href="#nosotros" className="hover:text-gnet-primary transition">Nosotros</a></li>
-            <li><a href="#programas" className="hover:text-gnet-primary transition">Programas</a></li>
-            <li><a href="#servicios" className="hover:text-gnet-primary transition">Servicios</a></li>
-            <li><a href="#galeria" className="hover:text-gnet-primary transition">Galería</a></li>
-            <li><a href="#contacto" className="bg-gnet-dark text-white px-4 py-2 rounded-lg hover:bg-gnet-primary transition">Contacto</a></li>
-          </ul>
-        </div>
-      </nav>
+     {/* Navbar con Menú Móvil */}
+<nav className="bg-white shadow-md sticky top-0 z-50 border-b border-gnet-light">
+  <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+    {/* Logo */}
+    <div className="flex items-center space-x-3">
+      <img src="/logo.png" alt="G-Net Studio Logo" className="h-16 w-auto object-contain" />
+      <span className="text-xl font-bold text-gnet-dark hidden sm:block">G-Net Studio</span>
+    </div>
+
+    {/* Menú de Escritorio (Se oculta en celular) */}
+    <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+      <li><a href="#inicio" className="hover:text-gnet-primary transition">Inicio</a></li>
+      <li><a href="#nosotros" className="hover:text-gnet-primary transition">Nosotros</a></li>
+      <li><a href="#programas" className="hover:text-gnet-primary transition">Programas</a></li>
+      <li><a href="#servicios" className="hover:text-gnet-primary transition">Servicios</a></li>
+      <li><a href="#galeria" className="hover:text-gnet-primary transition">Galería</a></li>
+      <li><a href="#contacto" className="bg-gnet-dark text-white px-4 py-2 rounded-lg hover:bg-gnet-primary transition">Contacto</a></li>
+    </ul>
+
+    {/* Botón de Menú Móvil (Hamburguesa) */}
+    <button 
+      className="md:hidden text-gnet-dark focus:outline-none p-2"
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      aria-label="Abrir menú"
+    >
+      {isMenuOpen ? (
+        // Ícono de X (Cerrar)
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      ) : (
+        // Ícono de Hamburguesa (Abrir)
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      )}
+    </button>
+  </div>
+
+  {/* Menú Desplegable Móvil */}
+  {isMenuOpen && (
+    <div className="md:hidden bg-white border-t border-gnet-light shadow-lg absolute w-full left-0 z-40">
+      <ul className="flex flex-col p-4 space-y-4 text-gray-700 font-medium text-center">
+        <li><a href="#inicio" onClick={() => setIsMenuOpen(false)} className="block py-2 hover:text-gnet-primary hover:bg-gray-50 rounded">Inicio</a></li>
+        <li><a href="#nosotros" onClick={() => setIsMenuOpen(false)} className="block py-2 hover:text-gnet-primary hover:bg-gray-50 rounded">Nosotros</a></li>
+        <li><a href="#programas" onClick={() => setIsMenuOpen(false)} className="block py-2 hover:text-gnet-primary hover:bg-gray-50 rounded">Programas</a></li>
+        <li><a href="#servicios" onClick={() => setIsMenuOpen(false)} className="block py-2 hover:text-gnet-primary hover:bg-gray-50 rounded">Servicios</a></li>
+        <li><a href="#galeria" onClick={() => setIsMenuOpen(false)} className="block py-2 hover:text-gnet-primary hover:bg-gray-50 rounded">Galería</a></li>
+        <li>
+          <a href="#contacto" onClick={() => setIsMenuOpen(false)} className="block bg-gnet-dark text-white px-4 py-3 rounded-lg hover:bg-gnet-primary transition text-center">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  )}
+</nav>
 
       {/* ===== INICIO ===== */}
       <section id="inicio" className="bg-gradient-to-br from-gnet-dark via-gnet-primary to-gray-900 text-white py-24">
