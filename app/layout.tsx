@@ -8,7 +8,8 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+// Agregamos los tipos explícitos para children
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
       <body className="antialiased">

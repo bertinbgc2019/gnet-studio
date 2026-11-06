@@ -3,23 +3,23 @@
 import { useState } from 'react';
 
 export default function Home() {
-  const [activeGallery, setActiveGallery] = useState(null);
-  const [fullScreenImage, setFullScreenImage] = useState(null);
-  const [showPrivacy, setShowPrivacy] = useState(false); // Nuevo estado para el aviso de privacidad
+  const [activeGallery, setActiveGallery] = useState<string | null>(null);
+const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
+const [showPrivacy, setShowPrivacy] = useState(false);
 
-  const galleries = {
-    pos: ["/pos1.png", "/pos2.png", "/pos3.png", "/pos4.png"],
-    vende: ["/vende1.png", "/vende2.png", "/vende3.png", "/vende4.png", "/vende5.png"],
-    aqua: ["/aqua1.png", "/aqua2.png", "/aqua3.png", "/aqua4.png"],
-    wifi: ["/wifi1.png", "/wifi2.png", "/wifi3.png", "/wifi4.png"],
-  };
+const galleries: Record<string, string[]> = {
+  pos: ["/pos1.png", "/pos2.png", "/pos3.png", "/pos4.png"],
+  vende: ["/vende1.png", "/vende2.png", "/vende3.png", "/vende4.png", "/vende5.png"],
+  aqua: ["/aqua1.png", "/aqua2.png", "/aqua3.png", "/aqua4.png"],
+  wifi: ["/wifi1.png", "/wifi2.png", "/wifi3.png", "/wifi4.png"],
+};
 
-  const galleryTitles = {
-    pos: "G-Net Punto de Venta",
-    vende: "Vende+",
-    aqua: "Gestion Aqua Clean",
-    wifi: "Wifirouter"
-  };
+const galleryTitles: Record<string, string> = {
+  pos: "G-Net Punto de Venta",
+  vende: "Vende+",
+  aqua: "Gestion Aqua Clean",
+  wifi: "Wifirouter"
+};
 
   return (
     <div className="min-h-screen bg-white">
