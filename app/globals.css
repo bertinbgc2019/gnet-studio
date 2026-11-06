@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gnet-dark: #003B6F;
+  --color-gnet-primary: #005A9E;
+  --color-gnet-gray: #8B9DAF;
+  --color-gnet-light: #B8C5D6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
