@@ -519,7 +519,7 @@ const galleryTitles: Record<string, string> = {
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">Mensaje</label>
-                  <textarea name="mensaje" rows="4" required className="w-full px-4 py-3 border-2 border-gnet-light rounded-lg focus:border-gnet-primary focus:outline-none transition bg-white" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                  <textarea name="mensaje" rows={4} required className="w-full px-4 py-3 border-2 border-gnet-light rounded-lg focus:border-gnet-primary focus:outline-none transition bg-white" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                 </div>
                 
                 {/* CHECKBOX DE PRIVACIDAD OBLIGATORIO */}
