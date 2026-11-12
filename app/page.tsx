@@ -102,7 +102,7 @@ const galleryTitles: Record<string, string> = {
                              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mt-4">
                     {/* Botón de Descarga Directa (Mediafire) */}
                     <a 
-                      href="https://www.mediafire.com/file/hxrgpqg7vb8bqso/GNet-PuntoDeVenta-0.1.0-setup.exe/file" 
+                      href="https://bit.ly/3X0XfEM" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-md"
@@ -288,7 +288,7 @@ const galleryTitles: Record<string, string> = {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
-            <div className="md:col-span-2 bg-gradient-to-r from-gnet-dark to-gnet-primary p-8 rounded-2xl shadow-xl text-white border-4 border-gnet-light">
+                        <div className="md:col-span-2 bg-gradient-to-r from-gnet-dark to-gnet-primary p-8 rounded-2xl shadow-xl text-white border-4 border-gnet-light">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0 bg-white p-4 rounded-xl">
                   <img src="/pos.png" alt="G-Net Punto de Venta" className="w-32 h-32 object-contain" />
@@ -297,6 +297,7 @@ const galleryTitles: Record<string, string> = {
                   <div className="inline-block bg-yellow-400 text-gnet-dark px-3 py-1 rounded-full text-xs font-bold mb-3">⭐ PRODUCTO ESTRELLA</div>
                   <h3 className="text-3xl font-bold mb-3">G-Net Punto de Venta</h3>
                   <p className="text-gray-100 mb-4">Programa de Punto de Venta para Negocios de Abarrotes, Refaccionarias, Papelerías, Farmacias, Verdulerías, Novedades, Ferreterías, entre otros.</p>
+                  
                   <div className="mb-4">
                     <ul className="text-gray-100 text-sm space-y-1 grid grid-cols-1 md:grid-cols-2 gap-2">
                       <li>✓ Control de Ventas</li>
@@ -309,17 +310,51 @@ const galleryTitles: Record<string, string> = {
                       <li>✓ Pagos de servicios</li>
                     </ul>
                   </div>
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
-                    <span className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm">Windows</span>
-                    <span className="px-3 py-1 bg-white bg-opacity-20 rounded-full text-sm">Android (Próximamente)</span>
+
+                  {/* PLATAFORMAS CON ÍCONOS VISIBLES */}
+                  <div className="mb-6">
+                    <p className="text-gnet-light text-sm font-semibold mb-2 uppercase tracking-wide">Plataformas disponibles:</p>
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                      <div className="flex items-center gap-2 bg-white text-gnet-dark px-4 py-2 rounded-full shadow-md">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                        </svg>
+                        <span className="font-bold text-sm">Windows</span>
+                      </div>
+                      <div className="flex items-center gap-2 bg-yellow-400 text-gnet-dark px-4 py-2 rounded-full shadow-md">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M17.523 15.341c-.551 0-.999-.448-.999-.999s.448-.999.999-.999c.551 0 .999.448.999.999.001.551-.448.999-.999.999m-11.046 0c-.551 0-.999-.448-.999-.999s.448-.999.999-.999c.551 0 .999.448.999.999s-.448.999-.999.999m11.404-6.02l1.997-3.459a.416.416 0 00-.152-.567.416.416 0 00-.567.152l-2.022 3.503C15.59 8.478 13.853 8.199 12 8.199c-1.853 0-3.59.279-5.137.751L4.841 5.447a.416.416 0 00-.567-.152.415.415 0 00-.152.567l1.997 3.459C2.688 11.186.343 14.658 0 18.761h24c-.344-4.103-2.689-7.575-6.119-9.44"/>
+                        </svg>
+                        <span className="font-bold text-sm">Android (Próximamente)</span>
+                      </div>
+                    </div>
                   </div>
-                  <a href="https://wa.me/522205291846?text=Hola,%20quiero%20información%20sobre%20G-Net%20Punto%20de%20Venta" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-gnet-dark px-8 py-3 rounded-lg font-bold hover:bg-gnet-light transition">
-                    Solicitar Demostración
-                  </a>
+
+                  {/* BOTONES DE ACCIÓN */}
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                    <a 
+                      href="https://bit.ly/3X0XfEM" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-md"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                      </svg>
+                      Descargar Instalador
+                    </a>
+                    <a 
+                      href="https://wa.me/522205291846?text=Hola,%20quiero%20información%20sobre%20G-Net%20Punto%20de%20Venta" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center justify-center gap-2 bg-white text-gnet-dark px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition border border-gray-200"
+                    >
+                      <span>💬</span> Solicitar Demostración
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-
             <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border-2 border-gnet-light hover:border-gnet-primary transition duration-300">
               <img src="/vende.png" alt="Vende+" className="w-20 h-20 object-contain mb-4" />
               <h3 className="text-xl font-bold text-gnet-dark mb-2">Vende+</h3>
