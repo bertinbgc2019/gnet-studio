@@ -99,9 +99,30 @@ const galleryTitles: Record<string, string> = {
             <a href="#programas" className="bg-gnet-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gnet-light hover:text-gnet-dark transition shadow-lg">
               Ver Características
             </a>
-            <a href="https://wa.me/522205291846?text=Hola,%20me%20interesa%20G-Net%20Punto%20de%20Venta" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gnet-dark transition flex items-center justify-center gap-2">
-              <span>💬</span> Cotizar por WhatsApp
-            </a>
+                             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mt-4">
+                    {/* Botón de Descarga Directa (Mediafire) */}
+                    <a 
+                      href="https://www.mediafire.com/file/hxrgpqg7vb8bqso/GNet-PuntoDeVenta-0.1.0-setup.exe/file" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition shadow-md"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                      </svg>
+                      Descargar Instalador
+                    </a>
+                    
+                    {/* Botón de WhatsApp */}
+                    <a 
+                      href="https://wa.me/522205291846?text=Hola,%20quiero%20información%20sobre%20G-Net%20Punto%20de%20Venta" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center justify-center gap-2 bg-white text-gnet-dark px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition border border-gray-200"
+                    >
+                      <span>💬</span> Solicitar Demostración
+                    </a>
+                  </div>
           </div>
         </div>
       </section>
